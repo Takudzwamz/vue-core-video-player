@@ -76,7 +76,7 @@ export default {
 <style>
 
 .vue-core-video-player-control.timespan {
-    line-height: 75px;
+    line-height: 74px;
     width: 100%;
     color:white;
     font-family: Arial!important;
