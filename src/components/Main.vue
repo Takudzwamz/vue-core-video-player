@@ -1,24 +1,31 @@
 <template>
   <b-container class="bv-example-row main">
     <b-row>
-      <b-col cols="8">
-        <div id="vue-core-video-player-box" class="example-player">
-          <vue-core-video-player :cover="currentMovie.cover3" :src="currentMovie.source"></vue-core-video-player>
+      <b-col cols="12">
+        <div id="vue-core-video-player-box" class="">
+          <vue-core-video-player style=" background: white;" :cover="currentMovie.cover3"  :src="currentMovie.source"></vue-core-video-player>
         </div>
         <div class="movie-detail">
           <h1 class="title">{{currentMovie.title}}</h1>
           <div class="date">{{currentMovie.author}} - {{currentMovie.date}}</div>
           <div class="desc">{{currentMovie.desc}} </div>
+          <div class="btn-wrap">
+            <b-button variant="outline-success" href="https://registertovotezw.live" >
+              
+              Go back to Register to vote page
+            </b-button>
+          </div>
           
         </div>
         <div class="recommend-list">
           <RecommendedItem v-for="movie in recommendList" :key="movie.cover" :item="movie"></RecommendedItem>
-        </div>
+        </div> 
+        <!---->
         <div class="thanks">
-          ❤ Video Source via Makoto Shinkai and Stephen Chow's Movies
+          ❤ Lets all register to vote Zimboz
         </div>
       </b-col>
-      <b-col cols="4" class="play-list">
+      <b-col cols="8" class="play-list">
         <h2>Play List</h2>
         <MovieItem v-for="movie in movieList" :key="movie.cover" :item="movie"></MovieItem>
       </b-col>
@@ -54,25 +61,47 @@ export default {
     return {
       title: '',
       movieList: DATA,
-      recommendList: [DATA[2], DATA[4], DATA[1], DATA[0]],
+      recommendList: [ DATA[4], DATA[1], DATA[0]],
       currentMovie: movie
     }
   },
   methods: {
     open() {
-      window.open('https://github.com/core-player/vue-core-video-player-examples')
+      window.open('https://registertovotezw.live/')
     }
   },
 }
 </script>
 
 <style>
+
+.vue-core-video-player-control.timespan {
+    line-height: 75px;
+    width: 100%;
+    color:white;
+    font-family: Arial!important;
+}
   .example-player {
     position: relative;
-    height: 410px;
+    
+    height: 610px;
     background-color: #000;
-    font-weight: normal;
+    font-weight: normal; 
   }
+
+  
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+.example-player{
+  height: 200px;
+}
+
+}
+
+
   .movie-detail{
     padding-top: 20px;
     color: rgba(0,0,0, .65);
@@ -100,6 +129,7 @@ export default {
   .recommend-list {
     margin-top: 40px;
     padding-top: 40px;
+    width: 100%;
     padding-bottom: 40px;
     border-top: 1px solid #ddd;
   }

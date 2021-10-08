@@ -37,17 +37,21 @@ export default {
     cursor: pointer;
     position: relative;
     width: 30%;
+    
     margin-right: 3%;
     margin-top: 20px;
+    
   }
   .movie-recommended .cover {
     position: relative;
     overflow: hidden;
     background: #000;
+    
   }
   .movie-recommended:hover .cover img {
     opacity: .7;
     transform: scale(1.25, 1.25);
+    
 
   }
   .movie-recommended .cover img {

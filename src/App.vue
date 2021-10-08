@@ -15,7 +15,7 @@ import Main from './components/Main.vue'
 import Foot from './components/Foot.vue'
 
 Vue.use(VueCoreVideoPlayer, {
-  lang: 'en US'
+  lang: 'en'
 })
 
 export default {
