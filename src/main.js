@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import VueCoreVideoPlayer from 'vue-core-video-player'
+import SkeletonCards from "vue-ultimate-skeleton-cards";
 
 import App from './App.vue'
 
@@ -19,6 +20,7 @@ Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 // Install vue-core-video-player
 Vue.use(VueCoreVideoPlayer)
+Vue.use(SkeletonCards);
 
 
 new Vue({

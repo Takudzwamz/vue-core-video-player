@@ -1,5 +1,5 @@
 <template>
-  <div class="movie-recommended" @click="changeMovie">
+  <!--<div class="movie-recommended" @click="changeMovie">
     <div class="cover">
       <img :src="item.cover2" alt="cover" />
       
@@ -10,7 +10,33 @@
       <div class="author">{{item.author}}</div>
       <div class="duration">Time: {{item.duration}}</div>
     </div>
-  </div>
+  </div>-->
+
+  <SkeletonScaffold
+    @click="changeMovie"
+    class="glass"
+    borderRadius="10px"
+    padding=" 2rem "
+    primary="#90A79EA4"
+    animDisable
+  >
+    <div @click="changeMovie" v-mCardImg>
+      <img :src="item.cover2" alt="cover" width="100%" />
+    </div>
+    <!-- Card Image -->
+    <br />
+
+    <div v-mSquare  class="card1">{{ item.date }}</div>
+    <!-- Profile image -->
+    <br />
+
+    <div v-mBox v-mLight class="card2">{{ item.title }}</div>
+    <!-- Heading -->
+    <div v-mBox v-mDark class="card3">{{ item.author }}</div>
+    <!-- Heading -->
+    <div v-mBox class="card4">Time: {{ item.duration }}</div>
+    <!-- Sub-Heading -->
+  </SkeletonScaffold>
 </template>
 
 <script>
@@ -18,104 +44,128 @@ export default {
   props: {
     item: Object,
   },
-  name: 'Recommended',
+  name: "Recommended",
   methods: {
-    changeMovie () {
+    changeMovie() {
       if (location.search) {
-        location.href = location.href.replace(/\?vid=([a-z]+)/, '?vid=' + this.item.id)
+        location.href = location.href.replace(
+          /\?vid=([a-z]+)/,
+          "?vid=" + this.item.id
+        );
       } else {
-        location.href = location.href + '?vid=' + this.item.id
+        location.href = location.href + "?vid=" + this.item.id;
       }
-    }
+    },
   },
-}
+};
 </script>
 
 <style>
-  .movie-recommended {
-    float: left;
-    cursor: pointer;
-    position: relative;
-    width: 30%;
-    
-    margin-right: 3%;
-    margin-top: 20px;
-    
-  }
-  .movie-recommended .cover {
-    position: relative;
-    overflow: hidden;
-    background: #000;
-    
-  }
-  .movie-recommended:hover .cover img {
-    opacity: .7;
-    transform: scale(1.25, 1.25);
-    
+.glass {
+  margin-bottom: 2em;
+  background: rgba(255, 255, 255, 0.1);
 
-  }
-  .movie-recommended .cover img {
-    width: 100%;
-    transition: transform ease .25s;
-  }
-  .movie-recommended .cover .duration {
-    position: absolute;
-    right: 5px;
-    bottom: 5px;
-    padding: 3px 6px;
-    line-height: 1.2em;
-    background-color: rgba(0,0,0, .65);
-    color: #fff;
-    font-size: 12px;
-    border-radius: 2px;
-  }
-  .movie-recommended .cover .date {
-    position: absolute;
-    right: 5px;
-    top: 5px;
-    display: inline-block;
-    padding: 3px 6px;
-    line-height: 1em;
-    background-color: #31C2F2;
-    color: #fff;
-    font-size: 12px;
-    border-radius: 2px;
-  }
-  .movie-recommended .detail {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px;
-    font-size: 12px;
-    color: rgba(255,255,255, .85);
-  }
-  .movie-recommended .detail div{
-    position: relative;
-  }
-  .movie-recommended .detail::before{
-    content: '';
-    display: block;
-    position: absolute;
-    top: -15px;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-image: linear-gradient(to top, rgba(0,0,0, .95), rgba(0,0,0, 0));
-  }
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.card1 {
+  border-radius: 10%;
+  color: white;
+  height: 2em;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.card2 {
+  height: 2.1em;
+  width: 100%;
+  font-size: 30px;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.card3 {
+  height: 1.5em;
+  width: 100%;
+  font-size: 15px;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   
-  .movie-recommended .detail .title {
-    color: #fff;
-    font-size: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+.card4 {
+  height: 1.4em;
+  width: 100%;
+  color: white;
+  font-size: 15px;
+  border-radius: 10px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+ 
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+ 
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
   }
-  .movie-recommended .detail .author{
-    font-size: 13px;
-    line-height: 1.5em;
+  .card1 {
+    border-radius: 10%;
+    color: white;
+    height: 2em;
+    text-align: center;
   }
-  
-  .movie-recommended .detail .data.hot {
-    background-color: #ff6060;
+
+  .card2 {
+    height: 3em;
+    width: 100%;
+    font-size: 15px;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: bold;
   }
+
+  .card3 {
+    height: 1.5em;
+    width: 100%;
+    font-size: 15px;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+  }
+  .card4 {
+    height: 1.4em;
+    width: 100%;
+    color: white;
+    font-size: 15px;
+    border-radius: 10px;
+    text-align: center;
+  }
+}
+
 
 </style>
 

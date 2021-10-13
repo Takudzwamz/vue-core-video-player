@@ -1,15 +1,22 @@
 <template>
-  <div class="footer">
+  <div style="
+      background: rgba(255, 255, 255, 0.1);
+      
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    " class="footer">
     <b-container class="bv-example-row footer">
       <b-row>
         <b-col>
           <p>
-            <img width="80" alt="logo" src="https://img1.wxzxzj.com/vue-core-video-player-logo-white.png" />
+            <img width="100" alt="logo" src="https://res.cloudinary.com/dyzeuqi75/image/upload/v1634125373/icon_f6mkzt.png" />
           </p>
           <p>Copyright © 2021 Video-RegisterToVoteZW</p>
         </b-col>
         <b-col>
-          <p class="title">Usefull Links</p>
+          <p class="title" style="color: #480470; font-weight: bold; ">Usefull Links</p>
           <p><a href="https://www.registertovotezw.live/centers" target="_blank">Registration Centers</a></p>
           <p><a href="https://www.registertovotezw.live/news" target="_blank">News</a></p>
           <p><a href="https://www.registertovotezw.live/contact_us" target="_blank">Contact Us</a></p>

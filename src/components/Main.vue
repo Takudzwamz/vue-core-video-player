@@ -1,36 +1,43 @@
+
 <template>
+
   <b-container class="bv-example-row main">
     <b-row>
       <b-col cols="12">
-        <div id="vue-core-video-player-box" class="">
+       
+        <div id="vue-core-video-player-box" class="blur">
           <vue-core-video-player style=" background: white;" :cover="currentMovie.cover3"  :src="currentMovie.source"></vue-core-video-player>
         </div>
-        <div class="movie-detail">
+        <div id="blur" class="movie-detail">
           <h1 class="title">{{currentMovie.title}}</h1>
           <div class="date">{{currentMovie.author}} - {{currentMovie.date}}</div>
           <div class="desc">{{currentMovie.desc}} </div>
           <div class="btn-wrap">
-            <b-button variant="outline-success" href="https://registertovotezw.live" >
+            <b-button style="margin-bottom:5px;" variant="outline-success" href="https://registertovotezw.live" >
               
-              Go back to Register to vote page
+              Go back Home
             </b-button>
           </div>
           
         </div>
         <div class="recommend-list">
+          <h2 style="color: #480470; font-weight: bold; ">Recommend-list</h2>
           <RecommendedItem v-for="movie in recommendList" :key="movie.cover" :item="movie"></RecommendedItem>
         </div> 
-        <!---->
+        <!--
         <div class="thanks">
           ❤ Lets all register to vote Zimboz
-        </div>
+        </div>-->
       </b-col>
-      <b-col cols="8" class="play-list">
-        <h2>Play List</h2>
+      <b-col cols="12" class="play-list">
+        <h2 style="color: #480470; font-size: 35px; font-weight: bold;">Play List</h2>
         <MovieItem v-for="movie in movieList" :key="movie.cover" :item="movie"></MovieItem>
       </b-col>
     </b-row>
+
   </b-container>
+
+  
 </template>
 
 <script>
@@ -38,6 +45,8 @@
 import MovieItem from './MovieItem.vue'
 import RecommendedItem from './Recommended.vue'
 import DATA from '../assets/data'
+
+
 
 let movie = DATA[2]
 
@@ -50,13 +59,14 @@ if (location.search) {
   })
 }
 
-
 export default {
   name: 'Main',
   components: {
     MovieItem,
-    RecommendedItem
-  },
+    RecommendedItem,
+    
+  }
+  ,
   data() {
     return {
       title: '',
@@ -71,25 +81,19 @@ export default {
     }
   },
 }
+
+
 </script>
 
 <style>
-
-.vue-core-video-player-control.timespan {
-    line-height: 74px;
-    width: 100%;
-    color:white;
-    font-family: Arial!important;
-}
-  .example-player {
+.example-player {
     position: relative;
     
     height: 610px;
     background-color: #000;
     font-weight: normal; 
-  }
-
-  
+}
+ 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   [class*="col-"] {
@@ -101,24 +105,27 @@ export default {
 
 }
 
-
   .movie-detail{
     padding-top: 20px;
-    color: rgba(0,0,0, .65);
+    
+    color: rgb(255, 255, 255);
   }
   .movie-detail h1{
-    font-size: 20px;
-    color: #000;
+    font-size: 25px;
+    margin: 8px;
+    color: #480470;
   }
   .movie-detail .date {
-    font-size: 14px;
+    font-size: 20px;
+    margin: 8px;
   }
   .movie-detail .desc {
-    font-size: 13px;
+    margin: 8px;
+    font-size: 15px;
     padding: 10px 20px 10px 0;
   }
   .movie-detail .btn-wrap {
-    padding-right: 20px;
+    padding: 10px;
     text-align: right;
   }
   .play-list h2 {
@@ -127,10 +134,11 @@ export default {
     padding-bottom: 10px;
   }
   .recommend-list {
-    margin-top: 40px;
-    padding-top: 40px;
+
+    margin-top: 50px;
+    padding-top: 50px;
     width: 100%;
-    padding-bottom: 40px;
+    padding-bottom: 0px;
     border-top: 1px solid #ddd;
   }
   .thanks {
@@ -141,7 +149,25 @@ export default {
   }
   .recommend-list:after{
     content: '';
-    display: block;
+    display:-moz-grid;
     clear: both;
+  }
+
+  .blur{
+      background: rgba(255, 255, 255, 0.1);
+    
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      border-radius: 10px;
+      border: 1px solid rgb(255, 255, 255);
+  }
+
+  #blur{
+      background: rgba(255, 255, 255, 0.1);
+    
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
   }
 </style>

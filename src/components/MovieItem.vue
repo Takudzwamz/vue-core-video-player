@@ -1,5 +1,5 @@
 <template>
-  <div class="movie-item" @click="changeMovie">
+  <!--<div class="movie-item" @click="changeMovie">
     <div class="cover">
       <img :src="item.cover" alt="cover" />
       <div class="duration">{{item.duration}}</div>
@@ -9,7 +9,34 @@
       <div class="author">{{item.author}}</div>
       <div class="date">{{item.date}}</div>
     </div>
-  </div>
+  </div>-->
+
+  
+  <SkeletonScaffold
+    @click="changeMovie"
+    class="glass"
+    borderRadius="10px"
+    padding=" 2rem "
+    primary="#952DAFA4"
+    animDisable
+  >
+    <div @click="changeMovie" v-mCardImg>
+      <img :src="item.cover2" alt="cover" width="100%" />
+    </div>
+    <!-- Card Image -->
+    <br />
+
+    <div v-mSquare  class="card1">{{ item.date }}</div>
+    <!-- Profile image -->
+    <br />
+
+    <div v-mBox v-mLight class="card2">{{ item.title }}</div>
+    <!-- Heading -->
+    <div v-mBox v-mDark class="card3">{{ item.author }}</div>
+    <!-- Heading -->
+    <div v-mBox class="card4">Time: {{ item.duration }}</div>
+    <!-- Sub-Heading -->
+  </SkeletonScaffold>
 </template>
 
 <script>
