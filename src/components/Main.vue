@@ -6,7 +6,7 @@
       <b-col cols="12">
        
         <div id="vue-core-video-player-box" class="blur">
-          <vue-core-video-player style=" background: white;" :cover="currentMovie.cover3"  :src="currentMovie.source"></vue-core-video-player>
+          <vue-core-video-player style=" background: transparent; margin-top:-5px; margin-bottom:-4px;" :cover="currentMovie.cover3"  :src="currentMovie.source"></vue-core-video-player>
         </div>
         <div id="blur" class="movie-detail">
           <h1 class="title">{{currentMovie.title}}</h1>

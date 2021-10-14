@@ -1,7 +1,7 @@
 const videoSource = [
   {
     src:
-      "https://res.cloudinary.com/dyzeuqi75/video/upload/v1633443614/yt5s.com-Youth_engagement_in_politics_indifferent_or_just_different_gpkmnn.mp4",
+      "https://res.cloudinary.com/dyzeuqi75/video/upload/v1634209375/yt5s.com-How_to_get_young_people_to_vote___Rick_Edwards___TEDxHousesofParliament_sjiv2z.mp4",
     resolution: 1080,
   },
 ];
@@ -10,8 +10,8 @@ const videoSource = [
 const DATA = [
   {
     id: "gdbzhhifhh",
-    title: "why is voting important?",
-    author: "Sputnik Tech",
+    title: "why is voting important to Zim?",
+    author: "Geoff Sayre-mccord ",
     date: "2021",
     desc: "Why voting is important to you as a citizen",
     link: "https://www.youtube.com/watch?v=tr8JzTLlq30",
@@ -28,7 +28,7 @@ const DATA = [
   {
     id: "hfkhzwgnwx",
     title: "why vote?",
-    author: "Sputnik Tech",
+    author: "MJ TV",
     date: "2021",
     desc: "Why voting is important to you as a citizen",
     link:
@@ -45,8 +45,8 @@ const DATA = [
   },
   {
     id: "jiytmghmyo",
-    title: "Youth engagement in politics",
-    author: "Sputnik Tech",
+    title: "How to get young people to vote",
+    author: "Rick Edwards",
     date: "2021",
     desc: "Why voting is important to you as a citizen",
     link:
@@ -79,8 +79,8 @@ const DATA = [
   },
   {
     id: "usgfiayjqx",
-    title: "why voting is important Zimboz",
-    author: "Sputnik Tech",
+    title: "How to use family dinner to teach politics",
+    author: "Hajer Sharief",
     date: "2021",
     desc: "Why voting is important to you as a citizen",
     link: "https://www.youtube.com/watch?v=bB7KvdTJCzE",
@@ -91,7 +91,7 @@ const DATA = [
     cover3:
       "https://res.cloudinary.com/dyzeuqi75/image/upload/v1634127007/Adobe_Post_20211013_1408270.14086167498324997_zxj7qa.png",
     source:
-      "https://res.cloudinary.com/dyzeuqi75/video/upload/v1634127730/getvideobot.com-0V1E4J0VuakWbemv_whraks.mp4",
+      "https://res.cloudinary.com/dyzeuqi75/video/upload/v1634207725/yt5s.com-How_to_use_family_dinner_to_teach_politics___Hajer_Sharief_vqoopc.mp4",
     duration: "00:46:04",
   },
 ];

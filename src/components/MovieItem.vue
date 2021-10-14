@@ -1,15 +1,5 @@
 <template>
-  <!--<div class="movie-item" @click="changeMovie">
-    <div class="cover">
-      <img :src="item.cover" alt="cover" />
-      <div class="duration">{{item.duration}}</div>
-    </div>
-    <div class="detail">
-      <div class="title">{{item.title}}</div>
-      <div class="author">{{item.author}}</div>
-      <div class="date">{{item.date}}</div>
-    </div>
-  </div>-->
+  
 
   
   <SkeletonScaffold
