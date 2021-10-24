@@ -6,14 +6,14 @@
       <b-col cols="12">
        
         <div id="vue-core-video-player-box" class="blur">
-          <vue-core-video-player style=" background: transparent; margin-top:-5px; margin-bottom:-4px;" :cover="currentMovie.cover3"  :src="currentMovie.source"></vue-core-video-player>
+          <vue-core-video-player style=" background: transparent; margin-top:-5px; margin-bottom:-4px; border-radius:10px;" :cover="currentMovie.cover3"  :src="currentMovie.source"></vue-core-video-player>
         </div>
         <div id="blur" class="movie-detail">
           <h1 class="title">{{currentMovie.title}}</h1>
           <div class="date">{{currentMovie.author}} - {{currentMovie.date}}</div>
           <div class="desc">{{currentMovie.desc}} </div>
           <div class="btn-wrap">
-            <b-button style="margin-bottom:5px;" variant="outline-success" href="https://registertovotezw.live" >
+            <b-button style="margin-bottom:5px;" variant="outline-success" href="https://registertovotezw-main.herokuapp.com" >
               
               Go back Home
             </b-button>
