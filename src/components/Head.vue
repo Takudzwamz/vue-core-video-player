@@ -12,7 +12,7 @@
     type="dark"
     variant="info"
   >
-    <b-navbar-brand href="https://registertovotezw-main.herokuapp.com/">
+    <b-navbar-brand href="https://registertovotezw.live">
       <img
         class="logo"
         src="https://res.cloudinary.com/dyzeuqi75/image/upload/v1634125373/icon_f6mkzt.png"
@@ -23,7 +23,7 @@
 
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav>
-        <b-nav-item href="https://registertovotezw-main.herokuapp.com/">Go Home</b-nav-item>
+        <b-nav-item href="https://registertovotezw.live">Go Home</b-nav-item>
       </b-navbar-nav>
 
       <!-- Right aligned nav items -->

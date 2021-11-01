@@ -13,7 +13,7 @@
           <div class="date">{{currentMovie.author}} - {{currentMovie.date}}</div>
           <div class="desc">{{currentMovie.desc}} </div>
           <div class="btn-wrap">
-            <b-button style="margin-bottom:5px;" variant="outline-success" href="https://registertovotezw-main.herokuapp.com" >
+            <b-button style="margin-bottom:5px;" variant="outline-success" href="https://registertovotezw.live" >
               
               Go back Home
             </b-button>
